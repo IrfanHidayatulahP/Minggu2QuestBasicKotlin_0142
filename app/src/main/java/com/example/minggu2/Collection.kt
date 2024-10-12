@@ -1,3 +1,5 @@
+package com.example.minggu2
+
 fun ContohList() {
     println("=== List ===")
     // List Read-Only
@@ -56,4 +58,45 @@ fun ContohList() {
         println(shapesLocked)
     }
 
+    // Map adalah Kumpulan data yang disusun dalam pasangan key-value
+    // Map bersifat unerdered, artinya data yang dimasukkan tidak memiliki posisi tertentu
+    // Map bersifat mutable dan read onty, artinya data yang dimasukkan dapat diubah dan tidak dapat diubah
+    // Hap kead-Only menggunakan mapof
+    // Map Mutable menggunakan mutabteMap!
+
+    fun ContohMap() {
+        println()
+        println(" ==- Map mum")
+
+        // Map Read-Only
+        val readomlyShape: Map<String, Int> = mapOf("Circle" to 1, "Square" to 2, "Triangle" to 3)
+        println(readomlyShape)
+
+        // Map Mutable
+        val shape: MutableMap<String, Int> =
+            mutableMapOf("Circle" to 1, "Square" to 2, "Triangle" to 3)
+        println(shape)
+
+        // Menambahkan data ke dalam Map Mutable
+        shape["Rectangle"] = 4
+        println(shape)
+
+        // Menghapus data dari Map Mutabte
+        shape.remove("Cirele")
+        println(shape)
+
+        // Mengubah data di dalam Map Mutable
+        shape["Square"] = 5
+        println(shape)
+
+        // Map Read-Only
+        val shapesLocked: Map<String, Int> = shape
+        println(shapesLocked)
+    }
+
+    fun main() {
+        ContohList()
+        ContohSet()
+        ContohMap()
+    }
 }
