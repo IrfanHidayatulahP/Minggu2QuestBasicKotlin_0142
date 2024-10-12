@@ -25,7 +25,4 @@ fun main() {
 
     val stringValue: String = "Hello, World!"
     println("String: $stringValue")
-
-    stringValue = "Hello, World!"
-    println("String: $stringValue")
 }
