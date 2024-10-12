@@ -19,4 +19,11 @@ fun NullSafety() {
     else {
         println("InfferedNonNull is not Null")
     }
+    // Safe call operator
+    fun strLength(notNull: String): Int {
+        return notNull.length
+    }
+
+    println(strLength(neverNull))
 }
+
